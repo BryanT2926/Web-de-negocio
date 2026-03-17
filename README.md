@@ -33,10 +33,10 @@ Sitio web responsive para un restaurante llamado **La Fogata Dorada**, diseñado
 Web-de-negocio
 /index
   │── index.html
-  │── styles.css
-  │── script.js
+  │── index.css
+  │── index.js
 /recursos
-  │── /images
+  │── /imagenes
 README.md
 
 ## ▶️ Cómo ejecutar el proyecto
