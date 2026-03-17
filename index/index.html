@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fogata Dorada – Restaurante</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">🔥 La Fogata Dorada</a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#menu">Menú</a></li>
+    <li><a href="#testimonios">Reseñas</a></li>
+    <li><a href="#contacto" class="nav-cta">Reservar</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#nosotros" onclick="closeMenu()">Nosotros</a>
+  <a href="#menu"     onclick="closeMenu()">Menú</a>
+  <a href="#testimonios" onclick="closeMenu()">Reseñas</a>
+  <a href="#contacto" onclick="closeMenu()">Reservar mesa</a>
+</div>
+ 
+<!-- HERO -->
+<section id="inicio">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="hero-content">
+    <span class="hero-badge">🍽️ Abierto todos los días</span>
+    <h1 class="hero-title">La <span>Fogata</span><br>Dorada</h1>
+    <p class="hero-sub">Sabores auténticos cocinados con pasión. Cada plato es una historia que te transporta directo al alma de nuestra cocina.</p>
+    <div class="hero-btns">
+      <a href="#menu"     class="btn btn-primary">Ver el Menú</a>
+      <a href="#contacto" class="btn btn-outline">Reservar Mesa</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+ 
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="nosotros-visual">
+    <div class="nosotros-img-placeholder">🍲</div>
+    <div class="badge-float">
+      <span class="num">12</span>
+      <span class="txt">años de<br>sabor</span>
+    </div>
+  </div>
+  <div>
+    <span class="section-label">Quiénes somos</span>
+    <h2 class="section-title">Cocina con <span>alma</span><br>y tradición</h2>
+    <p class="section-desc">Somos más que un restaurante: somos el lugar donde las familias se reúnen, las amistades se forjan y cada bocado despierta recuerdos. Recetas transmitidas de generación en generación, ingredientes frescos del día y un equipo que cocina con el corazón.</p>
+    <div class="features">
+      <div class="feat">
+        <div class="feat-icon">🥬</div>
+        <div class="feat-text">
+          <strong>Ingredientes frescos</strong>
+          <span>Compras diarias en mercado local</span>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-icon">👨‍🍳</div>
+        <div class="feat-text">
+          <strong>Chef experto</strong>
+          <span>Más de 15 años de experiencia</span>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-icon">🏡</div>
+        <div class="feat-text">
+          <strong>Ambiente acogedor</strong>
+          <span>Perfecto para familia y amigos</span>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-icon">⭐</div>
+        <div class="feat-text">
+          <strong>Top reseñas</strong>
+          <span>4.9★ en Google Maps</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- MENÚ -->
+<section id="menu">
+  <div class="menu-header">
+    <div>
+      <span class="section-label">Lo que ofrecemos</span>
+      <h2 class="section-title">Nuestro <span>Menú</span></h2>
+      <p class="section-desc">Platos elaborados con amor. Hay algo para cada antojo.</p>
+      <div class="menu-tabs">
+        <button class="tab active" onclick="filterMenu('todos', this)">Todos</button>
+        <button class="tab" onclick="filterMenu('entradas', this)">Entradas</button>
+        <button class="tab" onclick="filterMenu('principales', this)">Principales</button>
+        <button class="tab" onclick="filterMenu('postres', this)">Postres</button>
+        <button class="tab" onclick="filterMenu('bebidas', this)">Bebidas</button>
+      </div>
+    </div>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+ 
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+  <span class="section-label" style="color:var(--amarillo)">Lo que dicen</span>
+  <h2 class="section-title">Nuestros <span style="color:var(--naranja)">clientes</span> hablan</h2>
+  <p class="section-desc">Más de 2,000 familias satisfechas. Estas son sus palabras, no las nuestras.</p>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"El mejor sancocho que he probado en mi vida. Se nota que está hecho con ingredientes frescos y mucho amor. Ya voy cada semana."</p>
+      <div class="testi-author">
+        <div class="avatar" style="background:rgba(249,115,22,.2)">👩</div>
+        <div class="testi-name"><strong>María González</strong><span>Cliente frecuente</span></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Fui con toda mi familia para celebrar el cumpleaños de mi mamá y el trato fue excepcional. La bandeja paisa, espectacular."</p>
+      <div class="testi-author">
+        <div class="avatar" style="background:rgba(232,57,29,.2)">👨</div>
+        <div class="testi-name"><strong>Carlos Mendoza</strong><span>Celebración familiar</span></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Los postres son una locura, especialmente el arroz con leche. El ambiente es cálido y el servicio muy rápido. Totalmente recomendado."</p>
+      <div class="testi-author">
+        <div class="avatar" style="background:rgba(22,163,74,.2)">👩</div>
+        <div class="testi-name"><strong>Luisa Herrera</strong><span>Visitante nueva</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contact-wrap">
+    <div>
+      <span class="section-label">Contáctanos</span>
+      <h2 class="section-title">¿Listo para <span>comer rico?</span></h2>
+      <p class="section-desc">Reserva tu mesa, haz pedidos especiales o simplemente salúdanos. Estamos listos para atenderte.</p>
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="info-icon red">📍</div>
+          <div class="info-text">
+            <strong>Dirección</strong>
+            <span>Calle Principal #45, Centro<br>Santa Rosa, Bolívar</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon orange">🕐</div>
+          <div class="info-text">
+            <strong>Horario</strong>
+            <span>Lunes – Sábado: 11am – 9pm<br>Domingo: 11am – 6pm</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon green">📞</div>
+          <div class="info-text">
+            <strong>Teléfono</strong>
+            <span>+57 300 000 0000</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20hacer%20una%20reserva%20en%20La%20Fogata%20Dorada%20🍽️"
+         class="whatsapp-btn" target="_blank">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.115 1.527 5.845L.057 23.7a.5.5 0 0 0 .606.614l5.985-1.571A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.655-.502-5.18-1.38l-.37-.22-3.826 1.004 1.02-3.727-.24-.382A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="+57 300..." />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="tu@correo.com" />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Fecha</label>
+          <input type="date" />
+        </div>
+        <div class="form-group">
+          <label>Personas</label>
+          <select>
+            <option>1-2 personas</option>
+            <option>3-4 personas</option>
+            <option>5-6 personas</option>
+            <option>7+ personas</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Mensaje</label>
+        <textarea placeholder="¿Alguna ocasión especial o petición?"></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Enviar Reserva 🍽️</button>
+    </form>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <span class="f-logo">🔥 La Fogata Dorada</span>
+  <p>Cocina con alma y tradición desde 2013</p>
+  <div class="f-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#menu">Menú</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <p style="margin-top:.6rem">© 2025 La Fogata Dorada · Todos los derechos reservados</p>
+</footer>
+ 
+<div id="toast">✅ ¡Reserva enviada! Te contactamos pronto.</div>
+
+<script src="index.js"></script>
+</body>
+</html>
